@@ -89,7 +89,6 @@ print(name_list)    #['Jill', 'Milly', 'Carter', 'Chris', 'Peter', 'Billy']
 
 
 
-
 # =====================Copying Lists=======================
 # import copy
 
