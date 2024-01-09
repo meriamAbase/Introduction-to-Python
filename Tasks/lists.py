@@ -14,80 +14,78 @@
 #   copy.deepcopy()  - Creates a copy of a nested list
 #   clear()     - Used to remove all items from a list                     #Test this out!
 #   sort()      - Sort a List in ascending, descending, or user-defined order
-# alphabets = ['a','e','d','c','b'] 
-# alphabets.sort() 
-# print(alphabets)   #['a', 'b', 'c', 'd', 'e']
-  
-# random_numbers = [2,5,6,1,8,3] 
-# random_numbers.sort() 
-# print(random_numbers)       #[1, 2, 3, 5, 6, 8]
-# #   min()       - Returns the smallest of the values in the list.
-# numbers = [23,25, 65,21,98]
-# print(min(numbers))   #21
-# #   mox()       - Returns the biggest item in the list.
+alphabets = ['a','e','d','c','b'] 
+alphabets.sort() 
+print(alphabets)   #['a', 'b', 'c', 'd', 'e']
+
+random_numbers = [2,5,6,1,8,3] 
+random_numbers.sort() 
+print(random_numbers)       #[1, 2, 3, 5, 6, 8]
+#   min()       - Returns the smallest of the values in the list.
+numbers = [23,25, 65,21,98]
+print(min(numbers))   #21
+#   mox()       - Returns the biggest item in the list.
 
 
-
-# # ===================Differnce between pop and remove===
-# ===============
+# ===================Differnce between pop and remove==================
 # # Remove is used when we have a name of a list item to remove it, e.g.:
-# name_list = ['James', 'Molly', 'Chris', 'Peter', 'Kim']
-# name_list.remove('Molly')
-# print(name_list)
+name_list = ['James', 'Molly', 'Chris', 'Peter', 'Kim']
+name_list.remove('Molly')
+print(name_list)
 
 #  Whereas with pop, we use the index number to remove an item (or leave it empty to remove the last item)
-# name_list = ['James', 'Molly', 'Chris', 'Peter', 'Kim']
-# name_list.pop(1)
-# print(name_list)
+name_list = ['James', 'Molly', 'Chris', 'Peter', 'Kim']
+name_list.pop(1)
+print(name_list)
 
-# # =======================del function=========================
-# # Further to 'pop', which simply can only remove one function at a time, we can
-# #  use 'del' to delete multiple items from a list.
-# # Example 1: Deleting 1 item
-# random_list = ['banana', 'apple', 'peach', 'plum', 5, 6, 7]
-# del random_list[1]      #['banana', 'peach', 'plum', 5, 6, 7]
-# print(random_list)
-# # Example 2: Deleting mutliple items
-# del random_list[1:4] #Deleting items in index 1, 2 and 3
-# print(random_list)      #['banana', 6, 7]
-# # And finally, to simply delete the whole list:
-# del random_list
-# # When atttempting to print 'random_list', we can see that we get a 'NameError'
-# # since it no longer exists!
+# =======================del function=========================
+# Further to 'pop', which simply can only remove one function at a time, we can
+#  use 'del' to delete multiple items from a list.
+# Example 1: Deleting 1 item
+random_list = ['banana', 'apple', 'peach', 'plum', 5, 6, 7]
+del random_list[1]      #['banana', 'peach', 'plum', 5, 6, 7]
+print(random_list)
+# Example 2: Deleting mutliple items
+del random_list[1:4] #Deleting items in index 1, 2 and 3
+print(random_list)      #['banana', 6, 7]
+# And finally, to simply delete the whole list:
+del random_list
+# When atttempting to print 'random_list', we can see that we get a 'NameError'
+# since it no longer exists!
 
 # ================== Checking if Something is in a List ==================
 # You can simply use an if statement to check if a certain item is in a list.
-# grocery_list = ['Bread', 'Milk', 'Butter', 'Cheese', 'Cereal']
-# # Preferred option and shorter code:
-# if 'Apples' in grocery_list:
-#     print('The item Apples was found in the list grocery_list')
-# else:
-#     print('The item Apples was not found in the list grocery_list')
+grocery_list = ['Bread', 'Milk', 'Butter', 'Cheese', 'Cereal']
+# Preferred option and shorter code:
+if 'Apples' in grocery_list:
+  print('The item Apples was found in the list grocery_list')
+else:
+  print('The item Apples was not found in the list grocery_list')
         
-# # This is a much quicker way than looping through all the items, such as if you did:
-# for item in grocery_list:
-#     if item == 'Apples':
-#         print('The item Apples was found in the list grocery_list')
+# This is a much quicker way than looping through all the items, such as if you did:
+for item in grocery_list:
+  if item == 'Apples':
+    print('The item Apples was found in the list grocery_list')
 
-# # =====================Nested lists=======================
-# # We can nest lists into other lists, for example:
-# a = [1,2,3]
-# b = ["a", "b", "c"]
-# c = [a, b, 'random word', 5]
-# print(c)        #[[1, 2, 3], ['a', 'b', 'c'], 'random word', 5]
-# # We can also remove nested lists using the .remove() function followed by which list or item you wish to remove.
-# c.remove(b)
-# print(c)        #[[1, 2, 3], 'random word', 5]
+# =====================Nested lists=======================
+# We can nest lists into other lists, for example:
+a = [1,2,3]
+b = ["a", "b", "c"]
+c = [a, b, 'random word', 5]
+print(c)        #[[1, 2, 3], ['a', 'b', 'c'], 'random word', 5]
+# We can also remove nested lists using the .remove() function followed by which list or item you wish to remove.
+c.remove(b)
+print(c)        #[[1, 2, 3], 'random word', 5]
 
-# # ==================Replacing elements in a list==================
-# # We can recall a list with an index number to replace a value! e.g:
-# name_list = ['James', 'Molly', 'Chris', 'Peter', 'Kim']
-# name_list[4] = 'Billy'
-# print(name_list)    #['James', 'Molly', 'Chris', 'Peter', 'Billy']
-# # To take this one step further, we can also call a range of indexes followed by 
-# # their replacements to replace more than one item at a time, e.g:
-# name_list[0:2] = ['Jill', 'Milly', 'Carter']
-# print(name_list)    #['Jill', 'Milly', 'Carter', 'Chris', 'Peter', 'Billy']
+# ==================Replacing elements in a list==================
+# We can recall a list with an index number to replace a value! e.g:
+name_list = ['James', 'Molly', 'Chris', 'Peter', 'Kim']
+name_list[4] = 'Billy'
+print(name_list)    #['James', 'Molly', 'Chris', 'Peter', 'Billy']
+# To take this one step further, we can also call a range of indexes followed by 
+# their replacements to replace more than one item at a time, e.g:
+name_list[0:2] = ['Jill', 'Milly', 'Carter']
+print(name_list)    #['Jill', 'Milly', 'Carter', 'Chris', 'Peter', 'Billy']
 
 
 
