@@ -101,5 +101,5 @@ while True:
     else:
         print("Error, match not found. Please try again. Tip: Make sure it is spelt correctly and please try again without any special characters.") 
     
-print("Thank you for using our services :)")       
-     
+print("Thank you for using our services :)")
+
