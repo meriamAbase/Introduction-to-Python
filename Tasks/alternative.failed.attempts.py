@@ -11,7 +11,7 @@ for char in alternate:
         alternate = alternate.lower()
         print(alternate)    
 
-#After extensive research and 1 week later... 
+#After researching and 1 week later... 
 
 # Second attempt
 
